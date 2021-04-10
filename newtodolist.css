@@ -1,0 +1,68 @@
+html {
+  font-family: "Josefin Sans", sans-serif;
+  background-image: linear-gradient(to bottom right, pink, red);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vh;
+  margin: auto;
+}
+
+.welcomeDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.tasksDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+#submitButton {
+  margin-top: 10px;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+li {
+  font-size: 20px;
+  list-style: none;
+}
+
+input[type="text"] {
+  border-radius: 3px;
+  border: none;
+  height: 30px;
+  width: 200px;
+  text-align: center;
+}
+
+button {
+  background-color: rgb(219, 228, 169);
+  border-radius: 4px;
+}
+
+.welcome {
+  margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+  margin-right: 20px;
+}
+
+fieldset {
+  border: none;
+  text-align: center;
+}
+
+/* make 3 to do lists in a flex row with headers aligned */
+/* give low med high lists underlined headers */
