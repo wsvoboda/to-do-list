@@ -9,6 +9,9 @@ const mediumPriorityList = document.querySelector(".medium-priority-list");
 const highPriorityList = document.querySelector(".high-priority-list");
 const newTaskPrompt = document.querySelector("#text-box");
 const submitButton = document.querySelector("#submitButton");
+const lowPriorityHeader = document.querySelector(".low-header");
+const medPriorityHeader = document.querySelector(".medium-header");
+const highPriorityHeader = document.querySelector(".high-header");
 
 const setUserName = () => {
   let myName = prompt("What is your name?");
@@ -27,43 +30,10 @@ if (!localStorage.getItem("name")) {
   myHeading.textContent = "Welcome to Your To Do List, " + storedName + "!";
 }
 
-// const addNewTask = () => {
-//   const taskHeaderHolder = document.querySelector(".taskList");
-//   taskHeaderHolder.innerHTML = "Your To Do List"; // adds header to newly made list
-//   deleteButton.innerHTML = "Delete Selected Task(s)";
-//   const tasksDiv = document.querySelector(".tasksDiv");
-//   tasksDiv.append(deleteButton); // adds delete button to newly made list
-//   lowPriorityList.innerHTML = "Low Priority Tasks"; // creates header for low priority list
-//   medPriorityList.innerHTML = "Medium Priority Tasks"; // creates header for medium priority list
-//   highPriorityList.innerHTML = "High Priority Tasks"; // creates header for high priority list
-//   const newlyAddedTask = document.createElement("li"); // creates list item for added task
-//   const checkboxes = document.createElement("input");
-//   checkboxes.type = "checkbox"; // adds checkbox to list item
-//   newlyAddedTask.innerHTML = newTaskPrompt.value;
-//   newlyAddedTask.prepend(checkboxes);
-//   lowPriorityList.append(newlyAddedTask);
-//   // if (lowPriorityButton.checked) {
-//   //   lowPriorityList.append(newlyAddedTask);
-//   // }
-//   // if (medPriorityButton.checked) {
-//   //   medPriorityList.append(newlyAddedTask);
-//   // }
-//   // if (highPriorityButton.checked) {
-//   //   highPriorityList.append(newlyAddedTask);
-//   // }
-//   document.getElementById("text-box").value = "";
-// };
-
 // const deleteTask = () => {
 //   // if checkbox is checked - remove list item
 //   // else do nothing
 // };
-
-// calls function to add task when button is clicked
-// submitButton.addEventListener("click", (event) => {
-//   addNewTask();
-//   event.preventDefault();
-// });
 
 // calls function to change user when button is clicked
 changeUserButton.addEventListener("click", setUserName);
@@ -80,6 +50,9 @@ function addNewTask() {
   deleteButton.innerHTML = "Delete Selected Task(s)";
   const tasksDiv = document.querySelector(".tasksDiv");
   tasksDiv.append(deleteButton);
+  lowPriorityHeader.innerHTML = "Low Priority Tasks";
+  medPriorityHeader.innerHTML = "Medium Priority Tasks";
+  highPriorityHeader.innerHTML = "High Priority Tasks";
   const newlyAddedTask = document.createElement("li");
   const checkboxes = document.createElement("input");
   checkboxes.type = "checkbox";
