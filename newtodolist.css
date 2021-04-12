@@ -76,7 +76,7 @@ fieldset {
 .three-task-lists {
   display: flex;
   flex-direction: row;
-  gap: 10%;
+  gap: 5%;
   font-size: 18px;
 }
 
@@ -84,16 +84,22 @@ fieldset {
   display: flex;
   flex-direction: column;
   width: 200px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .medium-priority-list {
   display: flex;
   flex-direction: column;
   width: 250px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .high-priority-list {
   display: flex;
   flex-direction: column;
   width: 200px;
+  font-size: 20px;
+  text-align: center;
 }

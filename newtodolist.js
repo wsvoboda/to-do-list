@@ -8,6 +8,7 @@ const highPriorityButton = document.getElementById("high");
 const lowPriorityList = document.querySelector(".low-priority-list");
 const medPriorityList = document.querySelector(".medium-priority-list");
 const highPriorityList = document.querySelector(".high-priority-list");
+const newTaskPrompt = document.querySelector("#text-box");
 
 const setUserName = () => {
   let myName = prompt("What is your name?");
@@ -38,7 +39,6 @@ const addNewTask = () => {
   const newlyAddedTask = document.createElement("li"); // creates list item for added task
   const checkboxes = document.createElement("input");
   checkboxes.type = "checkbox"; // adds checkbox to list item
-  const newTaskPrompt = document.querySelector("#text-box");
   newlyAddedTask.innerHTML = newTaskPrompt.value;
   newlyAddedTask.prepend(checkboxes);
   if (lowPriorityButton.checked) {
