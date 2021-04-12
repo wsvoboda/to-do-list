@@ -1,7 +1,7 @@
 const myHeading = document.querySelector(".welcome");
 const changeUserButton = document.querySelector(".changeUser");
-const deleteButton = document.querySelector("#delete");
 const form = document.querySelector("form");
+const deleteButton = document.createElement("button");
 
 const setUserName = () => {
   let myName = prompt("What is your name?");
@@ -43,9 +43,11 @@ const addNewTask = () => {
   newlyAddedTask.prepend(checkboxes);
   if (lowPriorityButton.checked) {
     lowPriorityList.append(newlyAddedTask);
-  } else if (medPriorityButton.checked) {
+  }
+  if (medPriorityButton.checked) {
     medPriorityList.append(newlyAddedTask);
-  } else {
+  }
+  if (highPriorityButton.checked) {
     highPriorityList.append(newlyAddedTask);
   }
   document.getElementById("text-box").value = "";
