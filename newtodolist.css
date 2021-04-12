@@ -1,6 +1,11 @@
 html {
   font-family: "Josefin Sans", sans-serif;
-  background-image: linear-gradient(to bottom right, pink, red);
+  background: linear-gradient(to bottom right, pink, red) no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .main-container {
@@ -22,7 +27,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 2px;
 }
 
 #submitButton {
@@ -51,8 +56,12 @@ button {
   border-radius: 4px;
 }
 
+* {
+  outline: none;
+}
 .welcome {
   margin-bottom: 5px;
+  text-align: center;
 }
 
 input[type="checkbox"] {
@@ -64,5 +73,27 @@ fieldset {
   text-align: center;
 }
 
-/* make 3 to do lists in a flex row with headers aligned */
-/* give low med high lists underlined headers */
+.three-task-lists {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  font-size: 18px;
+}
+
+.low-priority-list {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.medium-priority-list {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.high-priority-list {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
