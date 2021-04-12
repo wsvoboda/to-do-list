@@ -2,6 +2,12 @@ const myHeading = document.querySelector(".welcome");
 const changeUserButton = document.querySelector(".changeUser");
 const form = document.querySelector("form");
 const deleteButton = document.createElement("button");
+const lowPriorityButton = document.getElementById("low");
+const medPriorityButton = document.getElementById("medium");
+const highPriorityButton = document.getElementById("high");
+const lowPriorityList = document.querySelector(".low-priority-list");
+const medPriorityList = document.querySelector(".medium-priority-list");
+const highPriorityList = document.querySelector(".high-priority-list");
 
 const setUserName = () => {
   let myName = prompt("What is your name?");
@@ -26,14 +32,8 @@ const addNewTask = () => {
   deleteButton.innerHTML = "Delete Selected Task(s)";
   const tasksDiv = document.querySelector(".tasksDiv");
   tasksDiv.append(deleteButton); // adds delete button to newly made list
-  const lowPriorityButton = document.getElementById("low");
-  const medPriorityButton = document.getElementById("medium");
-  const highPriorityButton = document.getElementById("high");
-  const lowPriorityList = document.querySelector(".low-priority-list");
   lowPriorityList.innerHTML = "Low Priority Tasks"; // creates header for low priority list
-  const medPriorityList = document.querySelector(".medium-priority-list");
   medPriorityList.innerHTML = "Medium Priority Tasks"; // creates header for medium priority list
-  const highPriorityList = document.querySelector(".high-priority-list");
   highPriorityList.innerHTML = "High Priority Tasks"; // creates header for high priority list
   const newlyAddedTask = document.createElement("li"); // creates list item for added task
   const checkboxes = document.createElement("input");
