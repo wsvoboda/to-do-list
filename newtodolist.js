@@ -35,15 +35,8 @@ if (!localStorage.getItem("name")) {
 //   // else do nothing
 // };
 
-// calls function to change user when button is clicked
 changeUserButton.addEventListener("click", setUserName);
-//
 
-// calls function to delete tasks when button is clicked
-// deleteButton.addEventListener("click", deleteTask);
-//
-
-// takes tasks and adds them to a list
 function addNewTask() {
   const taskHeaderHolder = document.querySelector(".taskList");
   taskHeaderHolder.innerHTML = "Your To Do List";
@@ -69,8 +62,5 @@ function addNewTask() {
   }
   document.getElementById("text-box").value = "";
 }
-//
 
-// calls function to add task when button is clicked
 submitButton.addEventListener("click", addNewTask);
-//
