@@ -49,11 +49,14 @@ input[type="text"] {
   height: 30px;
   width: 200px;
   text-align: center;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 button {
   background-color: rgb(219, 228, 169);
   border-radius: 4px;
+  font-family: "Josefin Sans", sans-serif;
+  padding-top: 4px;
 }
 
 * {
