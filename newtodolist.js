@@ -30,11 +30,6 @@ if (!localStorage.getItem("name")) {
   myHeading.textContent = "Welcome to Your To Do List, " + storedName + "!";
 }
 
-// const deleteTask = () => {
-//   // if checkbox is checked - remove list item
-//   // else do nothing
-// };
-
 changeUserButton.addEventListener("click", setUserName);
 
 function addNewTask() {
@@ -63,11 +58,9 @@ function addNewTask() {
   document.getElementById("text-box").value = "";
 }
 
-submitButton.addEventListener("click", addNewTask);
-
-// const deleteListItems = () => {
-//   lowPriorityList
-// }
+submitButton.addEventListener("click", (e) => {
+  addNewTask();
+});
 
 function remLow() {
   let list = lowPriorityList,
