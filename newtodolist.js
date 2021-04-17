@@ -64,3 +64,46 @@ function addNewTask() {
 }
 
 submitButton.addEventListener("click", addNewTask);
+
+// const deleteListItems = () => {
+//   lowPriorityList
+// }
+
+function remLow() {
+  let list = lowPriorityList,
+    items = Array.prototype.slice.call(list.childNodes),
+    item;
+  while ((item = items.pop())) {
+    if (item.firstChild && item.firstChild.checked) {
+      list.removeChild(item);
+    }
+  }
+}
+
+function remMed() {
+  let list = mediumPriorityList,
+    items = Array.prototype.slice.call(list.childNodes),
+    item;
+  while ((item = items.pop())) {
+    if (item.firstChild && item.firstChild.checked) {
+      list.removeChild(item);
+    }
+  }
+}
+
+function remHigh() {
+  let list = highPriorityList,
+    items = Array.prototype.slice.call(list.childNodes),
+    item;
+  while ((item = items.pop())) {
+    if (item.firstChild && item.firstChild.checked) {
+      list.removeChild(item);
+    }
+  }
+}
+
+deleteButton.addEventListener("click", (e) => {
+  remLow();
+  remMed();
+  remHigh();
+});
